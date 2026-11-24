@@ -1,0 +1,80 @@
+{
+  "TYPES": {
+    "Actor": {
+      "whispers-of-the-abyss.shadow": "Schatten"
+    }
+  },
+  "WOTA": {
+    "SheetLabel": "Schatten-Bogen (Into the Abyss)",
+    "Shadow": {
+      "NamePlaceholder": "Name des Schattens",
+      "NoActor": "– kein Vampir –",
+      "OpenLinked": "Bogen des Vampirs öffnen",
+      "LinkedMissing": "Der verknüpfte Actor existiert nicht mehr.",
+      "FIELDS": {
+        "linkedActor": {
+          "label": "Vampir",
+          "hint": "Der Charakter, dessen Schatten du spielst."
+        },
+        "angst": {
+          "label": "Angst",
+          "hint": "Die Währung des Schattens (0–10)."
+        },
+        "notes": {
+          "label": "Notizen",
+          "hint": "Notizen zu deinem Schatten und zum Charakter, dessen Schatten du spielst …"
+        }
+      }
+    },
+    "Angst": {
+      "Increase": "Angst erhöhen",
+      "Decrease": "Angst senken"
+    },
+    "Gain": {
+      "Title": "Angst sammeln",
+      "bestialFailure": "Bestial Failure / Messy Critical",
+      "bonusDice": "Bonuswürfel angenommen",
+      "conviction": "Gegen Conviction gehandelt"
+    },
+    "Move": {
+      "Title": "Schatten-Moves",
+      "Cost": "Kosten in Angst",
+      "Prerequisite": "Voraussetzung",
+      "Use": "Ausführen",
+      "aleaIactaEst": {
+        "name": "Alea iacta est",
+        "prerequisite": "Ein fehlgeschlagener Wurf.",
+        "effect": "Verwandle einen normalen Fehlschlag in einen Bestial Failure, da der Abyss das Biest antreibt. Du erhältst dafür keine +1 Angst."
+      },
+      "cloudTheMind": {
+        "name": "Den Geist vernebeln",
+        "prerequisite": "Eine Disziplin wird eingesetzt.",
+        "effect": "Die Disziplin verläuft im Abyss und der Effekt tritt nicht ein. (Der Rouse Check wird trotzdem gemacht.)"
+      },
+      "sowDoubt": {
+        "name": "Zweifel säen",
+        "prerequisite": "Ein erfolgreicher Wurf.",
+        "effect": "Zwinge den Vampir, bis zu drei reguläre Würfel neu zu würfeln. Hungerwürfel können nicht neu gewürfelt werden. Die Wahl der Würfel liegt beim Schatten."
+      },
+      "hungerOfTheVoid": {
+        "name": "Hunger der Leere",
+        "prerequisite": "Der Hunger des Vampirs liegt unter 4.",
+        "effect": "Der Vampir erhält sofort 1 Hunger, da der Abyss ihre Vitae aussaugt."
+      },
+      "fataMorgana": {
+        "name": "Fata Morgana der Schatten",
+        "prerequisite": "Keine.",
+        "effect": "Der Schatten verzerrt die Wahrnehmung der Realität des Vampirs. Für den Rest der Szene sieht sie vielleicht einen Feind als geliebten Touchstone, hört die Stimme ihres toten Sires oder nimmt eine sichere Zuflucht als einen traumatischen Ort aus ihrer Vergangenheit wahr. Der Erzähler entscheidet zusammen mit dem Schatten über die Illusion."
+      },
+      "frenzyOfTheDamned": {
+        "name": "Raserei der Verdammten",
+        "prerequisite": "Ein stressiger Moment.",
+        "effect": "Erzwingt einen sofortigen Frenzy Check (Fear / Rage)."
+      }
+    },
+    "Notify": {
+      "NotEnoughAngst": "Nicht genug Angst für diesen Move.",
+      "NoPermission": "Du hast keine Berechtigung, diesen Bogen zu öffnen."
+    }
+  }
+}

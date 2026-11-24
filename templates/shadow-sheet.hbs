@@ -1,0 +1,84 @@
+<div class="wota-sheet">
+  <header class="wota-header">
+    <img class="wota-portrait" src="{{actor.img}}" alt="{{actor.name}}"
+      {{#if editable}}data-action="editImage" data-edit="img"{{/if}} />
+    <div class="wota-header-fields">
+      <input class="wota-name" type="text" name="name" value="{{actor.name}}"
+        placeholder="{{localize 'WOTA.Shadow.NamePlaceholder'}}" {{disabled locked}} />
+      <div class="wota-linked">
+        <label for="{{actor.id}}-linked">{{localize "WOTA.Shadow.FIELDS.linkedActor.label"}}</label>
+        <div class="wota-linked-row">
+          <select id="{{actor.id}}-linked" name="system.linkedActor" {{disabled locked}}>
+            {{selectOptions actorOptions selected=system.linkedActor blank=(localize "WOTA.Shadow.NoActor")}}
+          </select>
+          {{#if linkedActor}}
+          <button type="button" class="wota-icon-button" data-action="openLinkedActor"
+            data-tooltip="{{localize 'WOTA.Shadow.OpenLinked'}}">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+          {{/if}}
+        </div>
+        {{#if linkedMissing}}
+        <p class="wota-hint">{{localize "WOTA.Shadow.LinkedMissing"}}</p>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  <section class="wota-section wota-angst">
+    <h2>{{localize "WOTA.Shadow.FIELDS.angst.label"}}</h2>
+    <div class="wota-angst-counter">
+      <button type="button" class="wota-step" data-action="angstDecrease" {{disabled decreaseDisabled}}
+        aria-label="{{localize 'WOTA.Angst.Decrease'}}" data-tooltip="{{localize 'WOTA.Angst.Decrease'}}">
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <div class="wota-dots" aria-hidden="true">
+        {{#each angstDots}}<span class="wota-dot{{#if filled}} filled{{/if}}"></span>{{/each}}
+      </div>
+      <output class="wota-angst-value">{{angst}}<span>/{{angstMax}}</span></output>
+      <button type="button" class="wota-step" data-action="angstIncrease" {{disabled increaseDisabled}}
+        aria-label="{{localize 'WOTA.Angst.Increase'}}" data-tooltip="{{localize 'WOTA.Angst.Increase'}}">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <h3>{{localize "WOTA.Gain.Title"}}</h3>
+    <div class="wota-gains">
+      {{#each gains}}
+      <button type="button" class="wota-gain" data-action="angstGain" data-gain="{{key}}" {{disabled isDisabled}}>
+        <span class="wota-amount">+{{amount}}</span>
+        <span class="wota-gain-label">{{localize label}}</span>
+      </button>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="wota-section wota-moves">
+    <h2>{{localize "WOTA.Move.Title"}}</h2>
+    <ul class="wota-move-list">
+      {{#each moves}}
+      <li class="wota-move">
+        <details>
+          <summary>
+            <span class="wota-move-name">{{localize name}}</span>
+            <span class="wota-move-cost" data-tooltip="{{localize 'WOTA.Move.Cost'}}">{{cost}}</span>
+          </summary>
+          <div class="wota-move-body">
+            <p><strong>{{localize "WOTA.Move.Prerequisite"}}:</strong> {{localize prerequisite}}</p>
+            <p>{{localize effect}}</p>
+          </div>
+        </details>
+        <button type="button" class="wota-move-use" data-action="useMove" data-move="{{key}}" {{disabled isDisabled}}>
+          {{localize "WOTA.Move.Use"}}
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <section class="wota-section wota-notes">
+    <h2><label for="{{actor.id}}-notes">{{localize "WOTA.Shadow.FIELDS.notes.label"}}</label></h2>
+    <textarea id="{{actor.id}}-notes" name="system.notes" rows="10"
+      placeholder="{{localize 'WOTA.Shadow.FIELDS.notes.hint'}}" {{disabled locked}}>{{system.notes}}</textarea>
+  </section>
+</div>

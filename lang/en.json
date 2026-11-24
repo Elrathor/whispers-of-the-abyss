@@ -1,0 +1,80 @@
+{
+  "TYPES": {
+    "Actor": {
+      "whispers-of-the-abyss.shadow": "Shadow"
+    }
+  },
+  "WOTA": {
+    "SheetLabel": "Shadow Sheet (Into the Abyss)",
+    "Shadow": {
+      "NamePlaceholder": "Name of the Shadow",
+      "NoActor": "– no vampire –",
+      "OpenLinked": "Open the vampire's sheet",
+      "LinkedMissing": "The linked actor no longer exists.",
+      "FIELDS": {
+        "linkedActor": {
+          "label": "Vampire",
+          "hint": "The character whose Shadow you play."
+        },
+        "angst": {
+          "label": "Angst",
+          "hint": "The Shadow's currency (0–10)."
+        },
+        "notes": {
+          "label": "Notes",
+          "hint": "Notes about your Shadow and the character whose Shadow you play …"
+        }
+      }
+    },
+    "Angst": {
+      "Increase": "Increase Angst",
+      "Decrease": "Decrease Angst"
+    },
+    "Gain": {
+      "Title": "Gain Angst",
+      "bestialFailure": "Bestial Failure / Messy Critical",
+      "bonusDice": "Bonus dice accepted",
+      "conviction": "Acted against a Conviction"
+    },
+    "Move": {
+      "Title": "Shadow Moves",
+      "Cost": "Cost in Angst",
+      "Prerequisite": "Prerequisite",
+      "Use": "Use",
+      "aleaIactaEst": {
+        "name": "Alea iacta est",
+        "prerequisite": "A failed roll.",
+        "effect": "Turn a regular failure into a Bestial Failure, as the Abyss drives the Beast. You do not gain +1 Angst for it."
+      },
+      "cloudTheMind": {
+        "name": "Cloud the Mind",
+        "prerequisite": "A Discipline is used.",
+        "effect": "The Discipline fades into the Abyss and its effect does not occur. (The Rouse Check is still made.)"
+      },
+      "sowDoubt": {
+        "name": "Sow Doubt",
+        "prerequisite": "A successful roll.",
+        "effect": "Force the vampire to reroll up to three regular dice. Hunger dice cannot be rerolled. The Shadow chooses the dice."
+      },
+      "hungerOfTheVoid": {
+        "name": "Hunger of the Void",
+        "prerequisite": "The vampire's Hunger is below 4.",
+        "effect": "The vampire immediately gains 1 Hunger as the Abyss drains her Vitae."
+      },
+      "fataMorgana": {
+        "name": "Fata Morgana of Shadows",
+        "prerequisite": "None.",
+        "effect": "The Shadow distorts the vampire's perception of reality. For the rest of the scene she might see an enemy as a beloved Touchstone, hear the voice of her dead Sire, or perceive a safe haven as a traumatic place from her past. The Storyteller decides on the illusion together with the Shadow."
+      },
+      "frenzyOfTheDamned": {
+        "name": "Frenzy of the Damned",
+        "prerequisite": "A stressful moment.",
+        "effect": "Forces an immediate Frenzy check (Fear / Rage)."
+      }
+    },
+    "Notify": {
+      "NotEnoughAngst": "Not enough Angst for this Move.",
+      "NoPermission": "You do not have permission to open this sheet."
+    }
+  }
+}

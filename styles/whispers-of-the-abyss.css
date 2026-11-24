@@ -1,0 +1,286 @@
+/* Whispers of the Abyss – Shadow sheet.
+ * Uses wod5e's vampire colours, fonts and texture when available,
+ * with plain fallbacks so the sheet also works on its own. */
+
+.whispers-of-the-abyss.shadow-sheet {
+  --wota-accent: var(--vampire-color-1, #650202);
+  --wota-accent-bright: var(--vampire-color-2, #d84343);
+  --wota-bg: #141010;
+  --wota-panel: rgba(0, 0, 0, 0.45);
+  --wota-border: rgba(216, 67, 67, 0.35);
+  --wota-text: #e8e2dc;
+  --wota-muted: #a89d94;
+  --wota-heading-font: Amarante, 'Modesto Condensed', serif;
+  --wota-body-font: Vollkorn, 'Signika', serif;
+}
+
+.whispers-of-the-abyss.shadow-sheet .window-content {
+  padding: 0;
+  color: var(--wota-text);
+  background:
+    linear-gradient(rgba(10, 6, 6, 0.55), rgba(10, 6, 6, 0.75)),
+    url('/systems/wod5e/assets/actor/actor_background_dark.webp') repeat,
+    var(--wota-bg);
+  font-family: var(--wota-body-font);
+}
+
+.wota-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+/* Header */
+.wota-header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.wota-portrait {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 2px solid var(--wota-accent);
+  border-radius: 4px;
+  background: #000;
+}
+
+.wota-portrait[data-action] {
+  cursor: pointer;
+}
+
+.wota-header-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.whispers-of-the-abyss .wota-name {
+  height: auto;
+  padding: 0.15rem 0.35rem;
+  font-family: var(--wota-heading-font);
+  font-size: 1.75rem;
+  color: var(--wota-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--wota-border);
+  border-radius: 0;
+}
+
+.wota-linked label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wota-muted);
+  margin-bottom: 0.2rem;
+}
+
+.wota-linked-row {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.wota-linked-row select {
+  flex: 1;
+  min-width: 0;
+}
+
+.wota-hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--wota-accent-bright);
+}
+
+/* Sections */
+.wota-section {
+  padding: 0.6rem 0.75rem 0.75rem;
+  background: var(--wota-panel);
+  border: 1px solid var(--wota-border);
+  border-radius: 4px;
+}
+
+.wota-section h2,
+.wota-section h3 {
+  margin: 0 0 0.5rem;
+  border: none;
+  font-family: var(--wota-heading-font);
+  color: var(--wota-accent-bright);
+}
+
+.wota-section h2 {
+  font-size: 1.35rem;
+}
+
+.wota-section h3 {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--wota-muted);
+}
+
+/* Angst counter */
+.wota-angst-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.whispers-of-the-abyss .wota-step,
+.whispers-of-the-abyss .wota-icon-button {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.wota-dots {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.wota-dot {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  border: 2px solid var(--wota-accent-bright);
+  background: transparent;
+}
+
+.wota-dot.filled {
+  background: var(--wota-accent-bright);
+  box-shadow: 0 0 6px var(--wota-accent-bright);
+}
+
+.wota-angst-value {
+  min-width: 3.2rem;
+  text-align: center;
+  font-family: var(--wota-heading-font);
+  font-size: 1.6rem;
+}
+
+.wota-angst-value span {
+  font-size: 0.9rem;
+  color: var(--wota-muted);
+}
+
+/* Quick gains */
+.wota-gains {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+}
+
+.whispers-of-the-abyss .wota-gain {
+  height: auto;
+  min-height: 3.4rem;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+.wota-amount {
+  font-family: var(--wota-heading-font);
+  font-size: 1.2rem;
+  color: var(--wota-accent-bright);
+}
+
+.wota-gain-label {
+  font-size: 0.8rem;
+}
+
+/* Moves */
+.wota-move-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.wota-move {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.wota-move details {
+  flex: 1;
+  min-width: 0;
+}
+
+.wota-move summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding-top: 0.25rem;
+}
+
+.wota-move-name {
+  flex: 1;
+}
+
+.wota-move-cost {
+  flex: 0 0 auto;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--wota-accent);
+  font-weight: bold;
+}
+
+.wota-move-body {
+  padding: 0.35rem 0 0.15rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--wota-muted);
+}
+
+.wota-move-body p {
+  margin: 0 0 0.3rem;
+}
+
+.whispers-of-the-abyss .wota-move-use {
+  flex: 0 0 6.5rem;
+  height: 2rem;
+}
+
+.whispers-of-the-abyss.shadow-sheet button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Notes */
+.wota-notes textarea {
+  width: 100%;
+  min-height: 10rem;
+  resize: vertical;
+  font-family: var(--wota-body-font);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .wota-gains {
+    grid-template-columns: 1fr;
+  }
+}
