@@ -35,7 +35,7 @@ Spieler mit der Stufe *Observer* können den Bogen ansehen, aber nichts ändern.
 
 ## Releases erstellen
 
-Tag und Release auf GitHub anlegen, z. B. `v0.2.0`. Der Workflow trägt die Version in die `module.json` ein, baut `module.zip` und hängt beide Dateien an das Release an.
+Einen Tag pushen, z. B. `git tag v0.2.0 && git push origin v0.2.0`. Der Workflow erstellt das Release, trägt die Version in die `module.json` ein und hängt `module.json` und `module.zip` an.
 
 ## Lizenz
 
