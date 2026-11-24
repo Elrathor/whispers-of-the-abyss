@@ -35,7 +35,7 @@ Spieler mit der Stufe *Observer* können den Bogen ansehen, aber nichts ändern.
 
 ## Releases erstellen
 
-Einen Tag pushen, z. B. `git tag v0.2.0 && git push origin v0.2.0`. Der Workflow erstellt das Release, trägt die Version in die `module.json` ein und hängt `module.json` und `module.zip` an.
+In der `module.json` die `version` erhöhen (z. B. auf `0.2.0`) und auf `main` pushen. Der Workflow erstellt dann automatisch Tag und Release `v0.2.0` und hängt `module.json` und `module.zip` an. Foundry bzw. The Forge zeigen das Update danach an.
 
 ## Lizenz
 
