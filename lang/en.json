@@ -17,7 +17,7 @@
           "hint": "The character whose Shadow you play."
         },
         "angst": {
-          "label": "Angst",
+          "label": "Fear",
           "hint": "The Shadow's currency (0–10)."
         },
         "notes": {
@@ -27,24 +27,24 @@
       }
     },
     "Angst": {
-      "Increase": "Increase Angst",
-      "Decrease": "Decrease Angst"
+      "Increase": "Increase Fear",
+      "Decrease": "Decrease Fear"
     },
     "Gain": {
-      "Title": "Gain Angst",
+      "Title": "Gain Fear",
       "bestialFailure": "Bestial Failure / Messy Critical",
       "bonusDice": "Bonus dice accepted",
       "conviction": "Acted against a Conviction"
     },
     "Move": {
       "Title": "Shadow Moves",
-      "Cost": "Cost in Angst",
+      "Cost": "Cost in Fear",
       "Prerequisite": "Prerequisite",
       "Use": "Use",
       "aleaIactaEst": {
         "name": "Alea iacta est",
         "prerequisite": "A failed roll.",
-        "effect": "Turn a regular failure into a Bestial Failure, as the Abyss drives the Beast. You do not gain +1 Angst for it."
+        "effect": "Turn a regular failure into a Bestial Failure, as the Abyss drives the Beast. You do not gain +1 Fear for it."
       },
       "cloudTheMind": {
         "name": "Cloud the Mind",
@@ -73,7 +73,7 @@
       }
     },
     "Notify": {
-      "NotEnoughAngst": "Not enough Angst for this Move.",
+      "NotEnoughAngst": "Not enough Fear for this Move.",
       "NoPermission": "You do not have permission to open this sheet."
     }
   }

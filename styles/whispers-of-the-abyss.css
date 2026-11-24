@@ -22,9 +22,17 @@
     url('/systems/wod5e/assets/actor/actor_background_dark.webp') repeat,
     var(--wota-bg);
   font-family: var(--wota-body-font);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .wota-sheet {
+  /* The part root is the scroll container (PARTS.sheet.scrollable), so the
+     scroll position also survives re-renders after each button click. */
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
