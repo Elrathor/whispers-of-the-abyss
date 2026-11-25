@@ -23,6 +23,10 @@
         "notes": {
           "label": "Notes",
           "hint": "Notes about your Shadow and the character whose Shadow you play …"
+        },
+        "speaking": {
+          "label": "Voice of the Shadow",
+          "hint": "Lights up in the panel while the Shadow is speaking."
         }
       }
     },
@@ -75,6 +79,21 @@
     "Notify": {
       "NotEnoughAngst": "Not enough Fear for this Move.",
       "NoPermission": "You do not have permission to open this sheet."
+    },
+    "Speaking": {
+      "Active": "The Shadow is speaking",
+      "Inactive": "Speak with the Shadow’s voice"
+    },
+    "Panel": {
+      "Title": "Voices of the Abyss",
+      "Toggle": "Show/hide the voices panel for everyone",
+      "Empty": "No Shadow with a vampire yet."
+    },
+    "Settings": {
+      "PanelVisible": {
+        "Name": "Show voices panel",
+        "Hint": "Shows all players the panel with the Shadows’ status lamps. Only the GM can show or hide it, e.g. outside the Abyss."
+      }
     }
   }
 }

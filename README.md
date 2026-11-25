@@ -14,6 +14,8 @@ Ein Foundry-VTT-Modul für das **„Into the Abyss“-Regelappendix** zu *Vampir
   - +2 für angenommene Bonuswürfel
   - +3 bei einem Verstoß gegen eine Conviction
 - **Schatten-Moves** mit Kosten, Voraussetzung und Effekt: „Ausführen“ zieht die Angst ab und ist ausgegraut, wenn die Angst nicht reicht
+- **Stimme des Schattens:** Toggle-Button auf dem Bogen, der anzeigt, dass gerade der Schatten spricht
+- **Panel „Stimmen des Abyss“:** für alle sichtbar und frei verschiebbar, mit einem Statuslämpchen pro Schatten (beschriftet mit dem Namen des Vampirs). Das Lämpchen leuchtet, solange der Schatten spricht. Wem der Schatten gehört (Schattenflüsterer und SL), kann es auch direkt im Panel umschalten. Spieler können das Panel nicht schließen; die SL blendet es für alle über den Geist-Button in der Token-Steuerung oder in den Modul-Einstellungen aus
 - **Notizen:** Freitextfeld zum Schatten und zum Charakter
 - **Sprachen:** Deutsch und Englisch
 

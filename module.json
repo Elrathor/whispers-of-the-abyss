@@ -2,7 +2,7 @@
   "id": "whispers-of-the-abyss",
   "title": "Whispers of the Abyss",
   "description": "Schatten-Bögen für das „Into the Abyss“-Regelappendix in Vampire: The Masquerade 5e (wod5e). Shadow sheets for the “Into the Abyss” rules appendix.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Elrathor",
@@ -45,7 +45,7 @@
   ],
   "url": "https://github.com/Elrathor/whispers-of-the-abyss",
   "manifest": "https://github.com/Elrathor/whispers-of-the-abyss/releases/latest/download/module.json",
-  "download": "https://github.com/Elrathor/whispers-of-the-abyss/releases/download/v0.1.2/module.zip",
+  "download": "https://github.com/Elrathor/whispers-of-the-abyss/releases/download/v0.2.0/module.zip",
   "bugs": "https://github.com/Elrathor/whispers-of-the-abyss/issues",
   "license": "LICENSE"
 }

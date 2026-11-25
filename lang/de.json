@@ -23,6 +23,10 @@
         "notes": {
           "label": "Notizen",
           "hint": "Notizen zu deinem Schatten und zum Charakter, dessen Schatten du spielst …"
+        },
+        "speaking": {
+          "label": "Stimme des Schattens",
+          "hint": "Leuchtet im Panel, solange der Schatten spricht."
         }
       }
     },
@@ -75,6 +79,21 @@
     "Notify": {
       "NotEnoughAngst": "Nicht genug Angst für diesen Move.",
       "NoPermission": "Du hast keine Berechtigung, diesen Bogen zu öffnen."
+    },
+    "Speaking": {
+      "Active": "Der Schatten spricht",
+      "Inactive": "Mit der Stimme des Schattens sprechen"
+    },
+    "Panel": {
+      "Title": "Stimmen des Abyss",
+      "Toggle": "Stimmen-Panel für alle ein-/ausblenden",
+      "Empty": "Noch kein Schatten mit Vampir."
+    },
+    "Settings": {
+      "PanelVisible": {
+        "Name": "Stimmen-Panel anzeigen",
+        "Hint": "Zeigt allen Spielern das Panel mit den Statuslämpchen der Schatten. Nur die SL kann es ein- und ausblenden, z. B. außerhalb des Abyss."
+      }
     }
   }
 }

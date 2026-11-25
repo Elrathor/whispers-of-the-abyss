@@ -27,7 +27,8 @@ export class ShadowSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       angstDecrease: ShadowSheet.#onAngstDecrease,
       angstGain: ShadowSheet.#onAngstGain,
       useMove: ShadowSheet.#onUseMove,
-      openLinkedActor: ShadowSheet.#onOpenLinkedActor
+      openLinkedActor: ShadowSheet.#onOpenLinkedActor,
+      toggleSpeaking: ShadowSheet.#onToggleSpeaking
     }
   }
 
@@ -61,6 +62,7 @@ export class ShadowSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       actorOptions,
       linkedActor: linked,
       linkedMissing: Boolean(system.linkedActor) && !linked,
+      speaking: system.speaking,
       angst,
       angstMax: ANGST_MAX,
       angstDots: Array.from({ length: ANGST_MAX }, (_, i) => ({ filled: i < angst })),
@@ -111,6 +113,10 @@ export class ShadowSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return
     }
     await this.#setAngst(angst - move.cost)
+  }
+
+  static async #onToggleSpeaking() {
+    await this.document.update({ 'system.speaking': !this.document.system.speaking })
   }
 
   static async #onOpenLinkedActor() {

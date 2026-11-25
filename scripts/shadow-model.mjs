@@ -21,7 +21,9 @@ export class ShadowData extends foundry.abstract.TypeDataModel {
         max: ANGST_MAX,
         initial: ANGST_START
       }),
-      notes: new fields.StringField({ required: true, blank: true, initial: '' })
+      notes: new fields.StringField({ required: true, blank: true, initial: '' }),
+      // True while the Shadow speaks with its voice (shown in the speaking panel).
+      speaking: new fields.BooleanField({ required: true, initial: false })
     }
   }
 }

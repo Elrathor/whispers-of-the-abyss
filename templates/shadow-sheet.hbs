@@ -22,6 +22,11 @@
         <p class="wota-hint">{{localize "WOTA.Shadow.LinkedMissing"}}</p>
         {{/if}}
       </div>
+      <button type="button" class="wota-speak-toggle{{#if speaking}} active{{/if}}" data-action="toggleSpeaking"
+        aria-pressed="{{#if speaking}}true{{else}}false{{/if}}" {{disabled locked}}>
+        <span class="wota-lamp{{#if speaking}} on{{/if}}" aria-hidden="true"></span>
+        {{#if speaking}}{{localize "WOTA.Speaking.Active"}}{{else}}{{localize "WOTA.Speaking.Inactive"}}{{/if}}
+      </button>
     </div>
   </header>
 

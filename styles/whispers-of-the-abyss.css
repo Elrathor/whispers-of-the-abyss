@@ -298,3 +298,127 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Status lamp (shared by sheet toggle and speaking panel)             */
+/* ------------------------------------------------------------------ */
+.wota-lamp {
+  flex: 0 0 auto;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #3a2f2f;
+  border: 1px solid #000;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.wota-lamp.on {
+  background: radial-gradient(circle at 35% 35%, #ffb3b3, #f51f1f 55%, #8b0000);
+  box-shadow: 0 0 6px 2px rgba(245, 31, 31, 0.75);
+  animation: wota-lamp-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes wota-lamp-pulse {
+  50% {
+    box-shadow: 0 0 12px 4px rgba(245, 31, 31, 0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wota-lamp.on {
+    animation: none;
+  }
+}
+
+/* Sheet toggle */
+.whispers-of-the-abyss .wota-speak-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: auto;
+  min-height: 2rem;
+  padding: 0.3rem 0.6rem;
+  line-height: 1.2;
+}
+
+.whispers-of-the-abyss .wota-speak-toggle.active {
+  background: var(--wota-accent);
+  border-color: var(--wota-accent-bright);
+  color: #fff;
+}
+
+/* ------------------------------------------------------------------ */
+/* Speaking panel                                                      */
+/* ------------------------------------------------------------------ */
+.wota-speaking-panel {
+  --wota-accent-bright: var(--vampire-color-2, #d84343);
+  min-width: 180px;
+}
+
+.wota-speaking-panel .window-content {
+  padding: 0.4rem;
+  background: rgba(12, 8, 8, 0.92);
+  color: #e8e2dc;
+  font-family: Vollkorn, 'Signika', serif;
+}
+
+/* Players must not be able to close the panel. */
+.wota-speaking-panel .window-header [data-action='close'] {
+  display: none;
+}
+
+.wota-lamps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.wota-speaking-panel .wota-lamp-row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.wota-speaking-panel .wota-lamp-row:not(:disabled):hover {
+  border-color: rgba(216, 67, 67, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.wota-speaking-panel .wota-lamp-row:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.wota-speaking-panel .wota-lamp-row.speaking {
+  border-color: var(--wota-accent-bright);
+  background: rgba(101, 2, 2, 0.45);
+  color: #fff;
+}
+
+.wota-lamp-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wota-lamps-empty {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #a89d94;
+}
